@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  koboldcpp:
+
+    build:
+      dockerfile: Dockerfile
+
+    container_name: koboldcpp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: ./models
+        target: /models
+    ports:
+      - '5001:5001'
+    environment:
+      - MODEL=${MODEL}
+    command: "/models/${MODEL}"
