@@ -24,3 +24,9 @@ http://localhost:5001
 First, go to 'Settings' and change 'Story Mode' to 'Chat Mode':
 ![select chat mode](./screenshot1.png)  
 Then, ask your first question.
+
+## Select a Model
+By default [ggml-vicuna-7b-4bit-rev1](https://huggingface.co/eachadea/legacy-ggml-vicuna-7b-4bit) is used. To select a different model pass the URL to the start script, like:
+```
+./start.sh https://huggingface.co/TheBloke/LongChat-7B-GGML/resolve/main/longchat-7b-16k.ggmlv3.q2_K.bin
+```
